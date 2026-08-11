@@ -26,4 +26,6 @@
 *   **user.cfg:**  Contains user-specific settings.
 
 **Note:**  Detailed configuration instructions are provided in the `config/` directory.  Consult the documentation within `config/` for complete details.
+
+**Security:** See [SECURITY.md](SECURITY.md) for the security policy. Do not commit real server passwords — set `password`/`sv_password` locally only. Verify no secrets are present with `python -m security.secret_scanner .` (run `pytest` for the test suite).
 ```

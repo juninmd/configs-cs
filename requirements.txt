@@ -1,0 +1,2 @@
+# Runtime dependencies. The configcheck package only uses the Python
+# standard library, so there is nothing to pin at runtime.

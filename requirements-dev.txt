@@ -1,0 +1,8 @@
+# Development dependencies, pinned for reproducible CI builds.
+bandit==1.9.4
+coverage==7.14.0
+mypy==2.3.0
+pip-audit==2.10.0
+pytest==9.0.3
+pytest-cov==7.1.0
+ruff==0.15.13

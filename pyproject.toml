@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "configs-cs"
+version = "0.1.0"
+description = "Validation tooling for the configs-cs Counter-Strike config repository."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "bandit==1.9.4",
+    "coverage==7.14.0",
+    "mypy==2.3.0",
+    "pip-audit==2.10.0",
+    "pytest==9.0.3",
+    "pytest-cov==7.1.0",
+    "ruff==0.15.13",
+]
+
+[tool.setuptools.packages.find]
+include = ["configcheck*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["configcheck"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM", "C4"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["configcheck"]
+warn_unused_ignores = true
+disallow_untyped_defs = true
